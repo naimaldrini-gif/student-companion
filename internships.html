@@ -1,0 +1,618 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+       <!-- =======================================================================
+             الشريط العلوي  
+       ======================================================================= -->
+    <header class="site-header">
+      <div class="header-container">
+        <!-- شعار المنصة -->
+        <a href="index.html" class="brand-identity">
+          <div class="brand-icon-box" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-title">رفيق الطالب الجامعي </span>
+            <span class="brand-subtitle">جامعة البلقاء التطبيقية · BAU</span>
+          </div>
+        </a>
+
+        <!--  الجامعة المعتمدة -->
+        <div class="uni-selector-wrap" title="اختر الحرم الجامعي النشط">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"
+            ></path>
+          </svg>
+          <label for="global-uni-select" style="cursor: pointer">الحرم:</label>
+          <select id="global-uni-select">
+            <option>جامعة البلقاء التطبيقية - المركز (السلط)</option>
+            <option>جامعة البلقاء - الهندسة التكنولوجية (البوليتكنك)</option>
+            <option>جامعة البلقاء التطبيقية - كلية الحصن (إربد)</option>
+            <option>الجامعة الأردنية (عمان)</option>
+            <option>جامعة العلوم والتكنولوجيا الأردنية</option>
+            <option>الجامعة الهاشمية (الزرقاء)</option>
+          </select>
+        </div>
+
+        <!-- قائمة الروابط الرئيسية -->
+        <nav class="primary-nav" aria-label="التنقل الأساسي">
+          <a href="index.html" class="nav-link active" aria-current="page">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            الرئيسية
+          </a>
+          <a href="books.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path
+                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+              ></path>
+            </svg>
+            تبادل الكتب
+          </a>
+          <a href="internships.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            فرص التدريب
+          </a>
+          <a href="housing.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            السكن الطلابي
+          </a>
+
+          <a href="ai.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+              ></path>
+            </svg>
+            مساعد الدراسة الذكي
+          </a>
+          <a href="saved.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
+            المفضلة وطلباتي
+          </a>
+        </nav>
+
+        <!-- إجراءات الهيدر السريعة -->
+        <div class="header-actions">
+          <button
+            id="btn-header-add-book"
+            class="btn-primary"
+            title="نشر إعلان كتاب"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span>إضافة كتاب</span>
+          </button>
+          <!-- زر القائمة المتنقلة -->
+          <button
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-label="فتح القائمة"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- قائمة الجوال المنسدلة -->
+      <div id="mobile-drawer" class="mobile-drawer">
+        <a href="index.html" class="nav-link active" aria-current="page"
+          >الرئيسية</a
+        >
+        <a href="books.html" class="nav-link">تبادل الكتب الجامعية</a>
+        <a href="internships.html" class="nav-link">فرص التدريب</a>
+        <a href="housing.html" class="nav-link">السكن الطلابي</a>
+        <a href="ai.html" class="nav-link">مساعد الدراسة الذكي</a>
+        <a href="saved.html" class="nav-link">المفضلة وطلباتي</a>
+      </div>
+    </header>
+    <main class="main-wrapper">
+      <section class="view-section active" id="view-internships">
+        <div class="section-header-block">
+          <div>
+            <h2 class="section-title">فرص التدريب الميداني والعملي</h2>
+            <p class="section-desc">
+              فرص حقيقية وتجريبية موجهة لطلبة كليات تكنولوجيا المعلومات،
+              الهندسة، الأعمال، والعلوم الطبية في الأردن مع إمكانية التقديم
+              الفوري.
+            </p>
+          </div>
+        </div>
+        <!-- شريط البحث والتصفية للتدريب -->
+        <div class="filters-bar">
+          <div class="search-box-wrap">
+            <svg
+              class="search-icon-inside"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+            </svg>
+            <input
+              class="search-input"
+              id="intern-search-input"
+              placeholder="ابحث باسم الشركة، المسمى الوظيفي، أو المهارات..."
+              type="text"
+            />
+          </div>
+          <select class="filter-select" id="intern-category-filter">
+            <option value="all">جميع التخصصات</option>
+            <option value="تكنولوجيا المعلومات">
+              تكنولوجيا المعلومات والبرمجيات
+            </option>
+            <option value="الهندسة">الهندسة والتصاميم</option>
+            <option value="العلوم الطبية">العلوم الطبية والصيدلانية</option>
+            <option value="الأعمال">الأعمال والمالية</option>
+          </select>
+          <select class="filter-select" id="intern-location-filter">
+            <option value="all">جميع المواقع</option>
+            <option value="عمان">عمان</option>
+            <option value="السلط">السلط</option>
+            <option value="إربد">إربد</option>
+            <option value="عن بعد">عن بعد / هجين</option>
+          </select>
+        </div>
+        <!-- شبكة فرص التدريب -->
+        <div class="internships-grid" id="internships-grid-container">
+          <!-- يتم رسم الفرص ديناميكياً بواسطة script.js -->
+           <article class="internship-card" data-intern-id="intern-1">
+
+  <div>
+    <div class="internship-top">
+
+      <div>
+        <h3 class="internship-role">
+          متدرب تطوير برمجيات وحلول الويب
+        </h3>
+
+        <p class="internship-company">
+          مجموعة زين الأردن (ZINC)
+        </p>
+      </div>
+
+      <div class="company-badge-box">
+        مج
+      </div>
+
+    </div>
+
+
+    <div class="internship-meta-tags">
+
+      <span class="meta-tag-item">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2">
+
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+
+        عمان - مجمع الملك حسين للأعمال
+      </span>
+
+
+      <span class="meta-tag-item">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2">
+
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+
+        3 أشهر (تدريب صيفي / فصلي)
+      </span>
+
+
+      <span class="meta-tag-item">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2">
+
+          <rect
+            x="3"
+            y="4"
+            width="18"
+            height="18"
+            rx="2"
+            ry="2">
+          </rect>
+
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+
+        آخر موعد: 2026-11-15
+      </span>
+
+    </div>
+
+
+    <p class="internship-desc">
+      فرصة متميزة للالتحاق بفرق العمل الرقمية لتطوير خدمات الموبايل والويب باستخدام أحدث التقنيات السحابية.
+    </p>
+
+
+    <div class="internship-skills">
+      <span class="skill-chip">JavaScript</span>
+      <span class="skill-chip">React</span>
+      <span class="skill-chip">REST APIs</span>
+      <span class="skill-chip">Git</span>
+    </div>
+
+  </div>
+
+
+  <div class="internship-footer">
+
+    <div>
+      <span
+        style="
+          font-size: 0.75rem;
+          color: var(--text-muted);
+          display: block;
+        ">
+        المكافأة والبدل:
+      </span>
+
+      <span class="stipend-amount">
+        150 د.أ شهرياً + شهادة تدريب معتمدة
+      </span>
+    </div>
+
+
+    <div
+      style="
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      ">
+
+      <button
+        class="btn-secondary"
+        type="button"
+        title="حفظ للمفضلة">
+
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2">
+
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+
+        </svg>
+      </button>
+
+
+      <button
+        class="btn-primary"
+        type="button">
+        تفاصيل والتقديم
+      </button>
+
+    </div>
+
+  </div>
+
+</article>
+           <!--////////////////////////////////////////////////////////////////////////////////-->
+
+        </div>
+        <div
+          class="empty-state-card"
+          id="internships-empty-state"
+          style="display: none"
+        >
+          <svg
+            class="empty-state-icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewbox="0 0 24 24"
+          >
+            <rect height="14" rx="2" ry="2" width="20" x="2" y="7"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <h3 class="empty-state-title">
+            لم نجد فرص تدريب مطابقة لمعايير البحث الحالية
+          </h3>
+          <p class="empty-state-desc">
+            يرجى تجربة البحث بتصنيف تخصصي آخر أو اختيار "جميع المواقع".
+          </p>
+        </div>
+      </section>
+    </main>
+    <div class="modal-backdrop" id="internship-details-modal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 class="modal-title">تفاصيل الفرصة التدريبية</h3>
+          <button aria-label="إغلاق النافذة" class="modal-close-btn">✕</button>
+        </div>
+        <div class="modal-body" id="internship-details-body">
+          <!-- تملأ ديناميكياً -->
+        </div>
+      </div>
+    </div>
+    <div class="modal-backdrop" id="apply-form-modal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div>
+            <h3 class="modal-title">تقديم طلب تدريب ميداني</h3>
+            <p
+              id="apply-modal-target-title"
+              style="
+                font-size: 0.85rem;
+                color: var(--primary-700);
+                font-weight: 700;
+              "
+            ></p>
+          </div>
+          <button aria-label="إغلاق النافذة" class="modal-close-btn">✕</button>
+        </div>
+        <form id="internship-apply-form">
+          <input id="apply-intern-id" type="hidden" />
+          <div class="modal-body">
+            <div class="form-grid">
+              <div class="form-group col-span-2">
+                <label class="form-label" for="apply-name"
+                  >الاسم الرباعي للطالب *</label
+                >
+                <input
+                  class="form-input"
+                  id="apply-name"
+                  placeholder="مثال: محمد عبدالله خالد الزعبي"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="apply-student-id"
+                  >الرقم الجامعي *</label
+                >
+                <input
+                  class="form-input"
+                  id="apply-student-id"
+                  placeholder="مثال: 320210045"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="apply-uni"
+                  >الجامعة أو الكلية</label
+                >
+                <select class="form-select" id="apply-uni">
+                  <option value="جامعة البلقاء التطبيقية - المركز (السلط)">
+                    جامعة البلقاء التطبيقية - المركز (السلط)
+                  </option>
+                  <option
+                    value="جامعة البلقاء - كلية الهندسة التكنولوجية (البوليتكنك)"
+                  >
+                    جامعة البلقاء - الهندسة التكنولوجية (البوليتكنك)
+                  </option>
+                  <option value="جامعة البلقاء التطبيقية - كلية الحصن">
+                    جامعة البلقاء التطبيقية - كلية الحصن
+                  </option>
+                  <option value="الجامعة الأردنية">الجامعة الأردنية</option>
+                  <option value="جامعة العلوم والتكنولوجيا الأردنية">
+                    جامعة العلوم والتكنولوجيا الأردنية
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="apply-major"
+                  >التخصص الأكاديمي *</label
+                >
+                <input
+                  class="form-input"
+                  id="apply-major"
+                  placeholder="مثال: هندسة البرمجيات"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="apply-gpa"
+                  >المعدل التراكمي (GPA)</label
+                >
+                <input
+                  class="form-input"
+                  id="apply-gpa"
+                  placeholder="مثال: 3.45 من 4 أو جيد جداً"
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="apply-phone"
+                  >رقم الهاتف للتواصل *</label
+                >
+                <input
+                  class="form-input"
+                  id="apply-phone"
+                  placeholder="مثال: 0791234567"
+                  required=""
+                  type="tel"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="apply-email"
+                  >البريد الإلكتروني الجامعي أو الشخصي</label
+                >
+                <input
+                  class="form-input"
+                  id="apply-email"
+                  placeholder="student@bau.edu.jo"
+                  type="email"
+                />
+              </div>
+              <div class="form-group col-span-2">
+                <label class="form-label" for="apply-notes"
+                  >نبذة عن مهاراتك ولماذا ترغب بهذا التدريب؟</label
+                >
+                <textarea
+                  class="form-textarea"
+                  id="apply-notes"
+                  placeholder="اذكر مشاريعك السابقة، اللغات البرمجية التي تتقنها، أو طموحاتك المهنية..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-secondary modal-close-btn" type="button">
+              إلغاء
+            </button>
+            <button class="btn-primary" type="submit">
+              إرسال طلب التدريب محلياً
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-backdrop" id="delete-confirm-modal">
+      <div class="modal-card" style="max-width: 440px">
+        <div class="modal-header">
+          <h3 class="modal-title" style="color: var(--accent-rose)">
+            تأكيد الحذف
+          </h3>
+          <button aria-label="إغلاق النافذة" class="modal-close-btn">✕</button>
+        </div>
+        <div class="modal-body">
+          <p
+            id="delete-modal-msg"
+            style="
+              font-size: 0.95rem;
+              color: var(--text-secondary);
+              line-height: 1.6;
+            "
+          >
+            هل أنت متأكد من حذف هذا العنصر؟ لا يمكن استرجاعه بعد الحذف.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary modal-close-btn" type="button">
+            إلغاء
+          </button>
+          <button
+            class="btn-primary"
+            id="btn-confirm-delete"
+            style="background-color: var(--accent-rose)"
+            type="button"
+          >
+            نعم، تأكيد الحذف
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="toast-container" id="toast-container"></div>
+    <div class="footer-bottom">
+      <div>
+        جميع الحقوق محفوظة © 2026 منصة رفيق الطالب الجامعي · تم التطوير لخدمة الطلبة
+        الجامعيين في المملكة الأردنية الهاشمية
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

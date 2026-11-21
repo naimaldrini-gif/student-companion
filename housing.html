@@ -1,0 +1,470 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+      <!-- =======================================================================
+             الشريط العلوي  
+       ======================================================================= -->
+    <header class="site-header">
+      <div class="header-container">
+        <!-- شعار المنصة -->
+        <a href="index.html" class="brand-identity">
+          <div class="brand-icon-box" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-title">رفيق الطالب الجامعي </span>
+            <span class="brand-subtitle">جامعة البلقاء التطبيقية · BAU</span>
+          </div>
+        </a>
+
+        <!--  الجامعة المعتمدة -->
+        <div class="uni-selector-wrap" title="اختر الحرم الجامعي النشط">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"
+            ></path>
+          </svg>
+          <label for="global-uni-select" style="cursor: pointer">الحرم:</label>
+          <select id="global-uni-select">
+            <option>جامعة البلقاء التطبيقية - المركز (السلط)</option>
+            <option>جامعة البلقاء - الهندسة التكنولوجية (البوليتكنك)</option>
+            <option>جامعة البلقاء التطبيقية - كلية الحصن (إربد)</option>
+            <option>الجامعة الأردنية (عمان)</option>
+            <option>جامعة العلوم والتكنولوجيا الأردنية</option>
+            <option>الجامعة الهاشمية (الزرقاء)</option>
+          </select>
+        </div>
+
+        <!-- قائمة الروابط الرئيسية -->
+        <nav class="primary-nav" aria-label="التنقل الأساسي">
+          <a href="index.html" class="nav-link active" aria-current="page">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            الرئيسية
+          </a>
+          <a href="books.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path
+                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+              ></path>
+            </svg>
+            تبادل الكتب
+          </a>
+          <a href="internships.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            فرص التدريب
+          </a>
+          <a href="housing.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            السكن الطلابي
+          </a>
+
+          <a href="ai.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+              ></path>
+            </svg>
+            مساعد الدراسة الذكي
+          </a>
+          <a href="saved.html" class="nav-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
+            المفضلة وطلباتي
+          </a>
+        </nav>
+
+        <!-- إجراءات الهيدر السريعة -->
+        <div class="header-actions">
+          <button
+            id="btn-header-add-book"
+            class="btn-primary"
+            title="نشر إعلان كتاب"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span>إضافة كتاب</span>
+          </button>
+          <!-- زر القائمة المتنقلة -->
+          <button
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-label="فتح القائمة"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- قائمة الجوال المنسدلة -->
+      <div id="mobile-drawer" class="mobile-drawer">
+        <a href="index.html" class="nav-link active" aria-current="page"
+          >الرئيسية</a
+        >
+        <a href="books.html" class="nav-link">تبادل الكتب الجامعية</a>
+        <a href="internships.html" class="nav-link">فرص التدريب</a>
+        <a href="housing.html" class="nav-link">السكن الطلابي</a>
+        <a href="ai.html" class="nav-link">مساعد الدراسة الذكي</a>
+        <a href="saved.html" class="nav-link">المفضلة وطلباتي</a>
+      </div>
+    </header>
+    <main class="main-wrapper">
+      <section class="view-section active" id="view-housing">
+        <div class="section-header-block">
+          <div>
+            <h2 class="section-title">دليل السكنات الطلابية</h2>
+            <p class="section-desc">
+              استكشف الشقق والغرف والاستوديوهات المفروشة القريبة من الحرم
+              الجامعي لجامعة البلقاء في السلط والمحافظات.
+            </p>
+          </div>
+        </div>
+        <!-- تنويه الشفافية القانونية والأمان -->
+        <div class="transparency-banner warning">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            ></path>
+            <line x1="12" x2="12" y1="9" y2="13"></line>
+            <line x1="12" x2="12.01" y1="17" y2="17"></line>
+          </svg>
+          <div>
+            <strong>تنبيه وإخلاء مسؤولية مهم للطلبة:</strong> كافة العروض والصور
+            المعروضة في هذا القسم هي عروض استرشادية وتجريبية لتوضيح وظائف المنصة
+            الطلابية وليست عروضاً عقارية تعاقدية مؤكدة. ننصح الطلبة وأولياء
+            الأمور دائماً بمعاينة السكن ميدانياً قبل إبرام أي اتفاقيات مالية.
+          </div>
+        </div>
+        <!-- فلاتر السكن الطلابي -->
+        <div class="filters-bar">
+          <select class="filter-select" id="housing-location-filter">
+            <option value="all">جميع المناطق والمجمعات</option>
+            <option value="السلط">مدينة السلط (الحرم الرئيسي)</option>
+            <option value="البوابة الشمالية">
+              بجانب بوابة الجامعة الشمالية
+            </option>
+            <option value="شارع الستين">شارع الستين</option>
+            <option value="حي السلالم">حي السلالم الراقي</option>
+          </select>
+          <select class="filter-select" id="housing-price-filter">
+            <option value="all">جميع نطاقات الإيجار</option>
+            <option value="under-100">أقل من 100 دينار / شهرياً</option>
+            <option value="100-150">من 100 إلى 150 دينار / شهرياً</option>
+            <option value="above-150">أكثر من 150 دينار / شهرياً</option>
+          </select>
+          <select class="filter-select" id="housing-type-filter">
+            <option value="all">جميع أنواع السكنات</option>
+            <option value="طلاب">سكن طلاب (ذكور)</option>
+            <option value="طالبات">سكن طالبات (إناث)</option>
+            <option value="استوديو">استوديو فردي مستقل</option>
+          </select>
+        </div>
+        <!-- شبكة السكنات -->
+        <div class="housing-grid" id="housing-grid-container">
+          <!-- يتم رسم السكنات ديناميكياً بواسطة script.js -->
+           <article class="housing-card" data-house-id="house-1">
+
+  <div class="housing-image-frame">
+
+    <img
+      src="images/housing_student_room_1793034365040.jpg"
+      alt="سكن روابي السلط الجامعي الفاخر"
+      loading="lazy">
+
+    <div class="housing-price-tag tabular-nums">
+      110 د.أ / شهرياً
+    </div>
+
+    <button
+      class="housing-fav-btn"
+      type="button"
+      title="حفظ للمفضلة">
+
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2">
+
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+        </path>
+
+      </svg>
+    </button>
+
+  </div>
+
+
+  <div class="housing-body">
+
+    <div>
+
+      <div
+        style="
+          font-size: 0.78rem;
+          font-weight: 700;
+          color: var(--primary-700);
+          margin-bottom: 0.25rem;
+        ">
+        طلاب ذكور
+      </div>
+
+      <h3 class="housing-title">
+        سكن روابي السلط الجامعي الفاخر (شباب)
+      </h3>
+
+      <p class="housing-location">
+
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2">
+
+          <path
+            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+          </path>
+
+          <circle
+            cx="12"
+            cy="10"
+            r="3">
+          </circle>
+
+        </svg>
+
+        السلط - بجانب البوابة الشمالية للبلقاء
+      </p>
+
+      <p
+        style="
+          font-size: 0.82rem;
+          color: var(--text-muted);
+          margin-bottom: 0.75rem;
+        ">
+        🚶 3 دقائق مشياً على الأقدام من الحرم الجامعي
+      </p>
+
+
+      <div class="housing-features-row">
+
+        <span class="housing-feature-badge">
+          إنترنت فايبر سريع
+        </span>
+
+        <span class="housing-feature-badge">
+          مفروش بالكامل
+        </span>
+
+        <span class="housing-feature-badge">
+          تدفئة وتكييف
+        </span>
+
+        <span class="housing-feature-badge">
+          +2
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="housing-footer">
+
+      <span
+        style="
+          font-size: 0.82rem;
+          color: var(--text-muted);
+        ">
+        بإشراف: أبو طارق - مشرف السكن
+      </span>
+
+      <button
+        class="btn-primary"
+        type="button">
+        عرض التفاصيل
+      </button>
+
+    </div>
+
+  </div>
+
+</article>
+           <!--////////////////////////////////////////////////////////////////////////////-->
+        </div>
+        <div
+          class="empty-state-card"
+          id="housing-empty-state"
+          style="display: none"
+        >
+          <svg
+            class="empty-state-icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewbox="0 0 24 24"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <h3 class="empty-state-title">
+            لا توجد سكنات مطابقة لخيارات الفلترة الحالية
+          </h3>
+          <p class="empty-state-desc">
+            يرجى توسيع نطاق الإيجار أو اختيار كافة المناطق للاطلاع على الخيارات
+            المتاحة.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div class="modal-backdrop" id="housing-details-modal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 class="modal-title">تفاصيل السكن الطلابي</h3>
+          <button aria-label="إغلاق النافذة" class="modal-close-btn">✕</button>
+        </div>
+        <div class="modal-body" id="housing-details-body">
+          <!-- تملأ ديناميكياً -->
+        </div>
+      </div>
+    </div>
+    <div class="modal-backdrop" id="delete-confirm-modal">
+      <div class="modal-card" style="max-width: 440px">
+        <div class="modal-header">
+          <h3 class="modal-title" style="color: var(--accent-rose)">
+            تأكيد الحذف
+          </h3>
+          <button aria-label="إغلاق النافذة" class="modal-close-btn">✕</button>
+        </div>
+        <div class="modal-body">
+          <p
+            id="delete-modal-msg"
+            style="
+              font-size: 0.95rem;
+              color: var(--text-secondary);
+              line-height: 1.6;
+            "
+          >
+            هل أنت متأكد من حذف هذا العنصر؟ لا يمكن استرجاعه بعد الحذف.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary modal-close-btn" type="button">
+            إلغاء
+          </button>
+          <button
+            class="btn-primary"
+            id="btn-confirm-delete"
+            style="background-color: var(--accent-rose)"
+            type="button"
+          >
+            نعم، تأكيد الحذف
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="toast-container" id="toast-container"></div>
+    <div class="footer-bottom">
+      <div>
+        جميع الحقوق محفوظة © 2026 منصة رفيق الطالب الجامعي · تم التطوير لخدمة الطلبة
+        الجامعيين في المملكة الأردنية الهاشمية
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
